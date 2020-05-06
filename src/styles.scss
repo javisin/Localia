@@ -32,24 +32,23 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
-.mat-expansion-panel-header-description, .mat-expansion-indicator::after {
-  color: white;
-}
-mat-expansion-panel:not([class*="mat-elevation-z"]) {
-  box-shadow: none !important;
-}
-.mat-expansion-panel-body {
-  padding: 0 !important;
-}
+
 .green{
-  background: linear-gradient(to right, rgb(23, 227, 30), rgb(15, 133, 18));
+  background: linear-gradient(to right, #72c505, #88c438);
 }
-mat-sidenav {
-  width: 200px;
+.nav-bg{
+  background-color: #f0f2f4;
 }
-mat-sidenav-content{
-  margin-top:80px;
+.localia-color{
+  color: #8cc63f;
 }
+.localia-border{
+  border-color: #8cc63f !important;
+}
+.bg-localia{
+  background-color: #8cc63f;
+}
+
 a:hover{
   text-decoration: none !important;
 }

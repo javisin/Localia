@@ -12,5 +12,54 @@
   padding: 2px 16px;
 }
 .location{
-  color:#D8D8D8
+  color:#cccccc;
+  font-weight: 500;
+}
+#otro {
+  display: none;
+  transition: transform 0.5s;
+  &.clicked {
+    transform: translateX(-50%);
+  }
+}
+.wrapper {
+  //width: 300px;
+  //height: 500px;
+  //margin: auto;
+  //position: relative;
+  //overflow: hidden;
+  //border-radius: 10px 10px 10px 10px;
+  //transform: scale(0.95);
+  //transition: box-shadow 0.5s, transform 0.5s;
+
+  .container {
+    overflow: hidden;
+    width: 95%;
+    height: 100%;
+    padding: 0;
+
+    .bottom {
+      width: 200%;
+      height: 20%;
+      transition: transform 0.5s;
+      &.clicked {
+        transform: translateX(-50%);
+      }
+      .btn:hover {
+        color: white;
+        background-color: #8cc63f !important;
+        text-decoration: none;
+      }
+      .left {
+        width: 50%;
+        position: relative;
+        float: left;
+      }
+      .right {
+        width: 50%;
+        float: right;
+        overflow: hidden;
+      }
+    }
+  }
 }
