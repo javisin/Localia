@@ -1,33 +1,32 @@
 <nav class="container-fluid fixed-top">
-  <div *ngIf="!mediumSize; else mediumnav" class="bg-white align-items-center row pt-4">
-    <div class="col-4 d-flex justify-content-center">
-      <fa-icon class="btn my-auto" *ngIf="mediumSize" (click)="sidenav.toggle()" [icon]="faMenu"></fa-icon>
-      <a routerLink="/" class="h1 text-center text-success">Localia</a>
+  <div *ngIf="!mediumSize; else mediumnav" class="align-items-center row nav-bg">
+    <div class="col-5 col-xl-4 d-flex justify-content-center">
+      <img src="assets/images/localialetras.png" routerLink="/" class="text-center" width="200px" height="82px" alt="logo">
     </div>
-    <div class="col-4 row border border-success rounded p-2 ">
+    <div class="col-5 col-xl-4 row border localia-border bg-white rounded p-2 mt-2 ">
       <label for="search" class="m-0">
-        <fa-icon class="text-success col-1" [icon]="faSearch"></fa-icon>
+        <fa-icon class="localia-color col-1" [icon]="faSearch"></fa-icon>
       </label>
       <input id="search" class="border-0 col-8 pl-0" type="text" placeholder="Busca tus productos">
     </div>
-    <div class="text-right col-4 ">
-      <fa-icon size="2x" [icon]="faUser" class=" p-0 text-success mr-3"></fa-icon>
-      <fa-icon size="2x" [icon]="faShoppingCart" class="p-0 text-success mr-3"></fa-icon>
+    <div class="text-right col-2 col-xl-4 mt-3 ">
+      <fa-icon size="2x" [icon]="faUser" class=" p-0 localia-color mr-3"></fa-icon>
+      <fa-icon size="2x" [icon]="faShoppingCart" class="p-0 localia-color mr-3"></fa-icon>
     </div>
   </div>
 </nav>
 <ng-template #mediumnav>
-  <div class="bg-white align-items-center row">
-    <div class="col-4 text-left">
-      <fa-icon [icon]="faMenu" (click)="sidenav.toggle()" class="btn text-success icon p-1"></fa-icon>
-      <fa-icon [icon]="faSearch" (click)="openDialog()" class="btn text-success icon p-1"  ></fa-icon>
+  <div class="nav-bg align-items-center row">
+    <div class="col-4 mt-1 text-left">
+      <fa-icon [icon]="faMenu" (click)="sidenav.toggle()" class="btn localia-color icon p-1"></fa-icon>
+      <fa-icon [icon]="faSearch" (click)="openDialog()" class="btn localia-color icon p-1"  ></fa-icon>
     </div>
     <div class="text-center col-4">
-      <img src="assets/images/Localialogo.png" routerLink="/" class="h3 text-center text-success" alt="logo">
+      <img src="assets/images/localialetras.png" routerLink="/" class="m-0" width="100px" height="41px" alt="logo">
     </div>
-    <div class="text-right col-4">
-      <fa-icon [icon]="faUser" class="btn icon p-1 text-success"></fa-icon>
-      <fa-icon [icon]="faShoppingCart" class="btn icon p-1 text-success"></fa-icon>
+    <div class="text-right col-4 mt-1">
+      <fa-icon [icon]="faUser" class="btn icon p-1 localia-color"></fa-icon>
+      <fa-icon [icon]="faShoppingCart" class="btn icon p-1 localia-color"></fa-icon>
     </div>
   </div>
 </ng-template>
@@ -37,10 +36,10 @@
                  [mode]="mediumSize ? 'over' : 'side'"
                  [opened]="!mediumSize" [disableClose]="!mediumSize" class="green">
 
-      <mat-nav-list class="text-white p-0" role="navigation">
-        <a mat-list-item routerLink="/frutas" class="pl-3 text-white"> Frutas </a>
-        <a mat-list-item routerLink="/verduras" class="pl-3 text-white"> Verduras </a>
-        <a mat-list-item class="pl-3 text-white"> Frutos secos </a>
+      <mat-nav-list class="p-0" role="navigation">
+        <a mat-list-item routerLink="/frutas" class="pl-3 text-white border-bottom font-weight-bolder"> Frutas </a>
+        <a mat-list-item routerLink="/verduras" class="pl-3 text-white border-bottom  font-weight-bolder"> Verduras </a>
+        <a mat-list-item class="pl-3 h1 text-white border-bottom  font-weight-bolder"> Frutos secos </a>
       </mat-nav-list>
     </mat-sidenav>
 
